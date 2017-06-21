@@ -1,0 +1,60 @@
+@import 'o-grid/main';
+
+#table_fees {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    th[aria-sort="descending"]:after {
+        content: "▾";
+        // background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/fticon-v1:{arrow-down}?source={your-source-here}');
+        margin-left: 5px;
+    }
+
+    th[aria-sort="ascending"]:after {
+        content: "▴";
+        margin-left: 5px;
+    }
+
+    @include oGridRespondTo($until: L) {
+        .table__exclude-mobile {
+            display: none;
+        }
+    }
+
+    th {
+        color:#00757F;
+        border-bottom: #CCC1B7 solid 1px;
+        line-height: 18px;
+        vertical-align: top;
+    }
+
+    th:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    tr {
+        border-bottom: #CCC1B7 solid 1px;
+    }
+
+    td {
+      text-align: right;
+    }
+
+    td.table_colspan {
+      text-align: center;
+      font-weight: 600;
+      color: #4D4845;
+      border-bottom: #4D4845 solid 2px;
+    }
+
+    td.ranking {
+      text-align: left;
+    }
+
+    td.firm {
+      text-align: left;
+    }
+
+}

@@ -1,0 +1,226 @@
+$font-sans: MetricWeb, sans-serif;
+$font-serif: Georgia, serif;
+$font-display: FinancierDisplayWeb, Georgia, serif;
+
+body {
+  @include oColorsFor(page, background);
+  margin: 0;
+  border: 0;
+  font-family: $font-sans;
+}
+
+.article {
+  &-head {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+
+  &-body {
+    div[data-o-grid-colspan] {
+      & > div {
+        max-width: 700px;
+      }
+    }
+  }
+}
+
+/* Hide whatsapp share button on desktop */
+.article__share {
+  @include oGridRespondTo(S) {
+    .o-share__action--whatsapp {
+      display: none;
+    }
+  }
+}
+
+
+.graphic {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+
+  & > img,
+  & > svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &-b-0 {
+    max-width: 625px;
+  }
+
+  &-b-1 {
+    max-width: 700px;
+  }
+
+}
+
+table {
+  width: 100%;
+  -webkit-font-smoothing: antialiased;  
+  border-spacing: 1px;
+  font-size: 14px;
+  &> thead {
+    &> tr {
+
+      &> th {
+        font-weight: 600;
+        background-color: oColorsGetPaletteColor('pink-tint2');
+        color: oColorsGetPaletteColor('grey-tint5');
+        border-bottom: 1px solid oColorsGetPaletteColor('pink-tint4');
+        cursor: default;
+        padding: 5px 30px 5px 10px;
+        text-align: left;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        cursor: pointer;
+        transition: background-color 0.3s; 
+        &:nth-child(n+4) {
+          text-align: left;
+        }
+        &:nth-child(n+5) {
+          text-align: left;
+        }
+        &:nth-child(n+6) {
+          text-align: left;
+        }
+        &:nth-child(n+7) {
+          text-align: left;
+        }
+        &:nth-child(n+8) {
+          text-align: left;
+        }
+        &:hover {
+          background-color: oColorsGetPaletteColor('pink-tint3');
+          transition: background-color 0s
+        }
+        &:active {
+          background-color: darken(oColorsGetPaletteColor('pink-tint3'), 5%);
+        }
+        &[aria-sort='descending']{
+          background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-up?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat oColorsGetPaletteColor('pink-tint3');
+          background-repeat: no-repeat;
+          background-position: 95% center;
+          background-position: right 15px center; 
+          background-size: 15px 15px;
+          margin: 0 7px 8px 0;
+        }
+        &[aria-sort='ascending']{
+          background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-down?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat oColorsGetPaletteColor('pink-tint3');
+          background-repeat: no-repeat;
+          background-position: 95% center;
+          background-position: right 15px center; 
+          background-size: 15px 15px;
+          margin: 0 7px 8px 0;
+        }
+      }
+    }
+  }
+
+  &> tbody {
+    &> tr {
+
+      &:nth-child(odd) {
+        background-color: oColorsGetPaletteColor('pink-tint1');
+      }
+      td{
+        border-bottom: 0px solid oColorsGetPaletteColor('pink-tint2');
+        padding: 10px;
+        text-align: center;
+        -webkit-font-feature-settings: 'tnum' 1;
+        font-feature-settings: 'tnum' 1;
+      }
+    }
+  }
+}
+
+td:nth-child(n+8),
+th:nth-child(n+8) {
+  display: none;
+}
+td:nth-child(2),
+th:nth-child(2) {
+  display: none;
+}
+td:nth-child(3),
+th:nth-child(3) {
+  display: none;
+}
+td:nth-child(6),
+th:nth-child(6) {
+  display: none;
+}
+td:nth-child(7),
+th:nth-child(7) {
+  display: none;
+}
+
+@include oGridRespondTo(S) {
+  .intro {
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+  td:nth-child(n),
+  th:nth-child(n) {
+    display: table-cell;
+  }
+  td:nth-child(n+6),
+  th:nth-child(n+6) {
+    display: none;
+  }
+}
+
+ @include oGridRespondTo(M) {
+  .headline {
+    font-size: 3em;
+    margin: 0.3em 0;
+  }
+  .intro {
+    font-size: 1.3em;
+    line-height: 1.4em;
+  }
+  table {
+    font-size: 14px;
+  }
+  td:nth-child(n),
+  th:nth-child(n) {
+    display: table-cell;
+  }
+  td:nth-child(n+8),
+  th:nth-child(n+8) {
+    display: none;
+  }
+}
+
+ @include oGridRespondTo(L) {
+  .headline {
+    font-size: 4em;
+    margin: 0.5em 0;
+  }
+  .intro {
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
+  td:nth-child(n),
+  th:nth-child(n) {
+    display: table-cell;
+  }
+  td:nth-child(n+10),
+  th:nth-child(n+10) {
+    display: none;
+  }
+}
+
+@include oGridRespondTo(XL) {
+  td:nth-child(n),
+  th:nth-child(n) {
+    display: table-cell;
+  }
+}
+
+

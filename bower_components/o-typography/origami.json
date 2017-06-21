@@ -1,0 +1,59 @@
+{
+	"description": "FT brand typographic styles",
+	"origamiType": "module",
+	"origamiCategory": "primitives",
+	"origamiVersion": 1,
+	"support": "https://github.com/Financial-Times/o-typography/issues",
+	"supportStatus": "active",
+	"browserFeatures": {
+		"optional": [
+			"textshadow"
+			]
+	},
+	"demosDefaults": {
+		"sass": "demos/src/demo.scss",
+		"dependencies": ["o-grid@^4.0.0"]
+	},
+	"ci": {
+		"circle": "https://circleci.com/api/v1/project/Financial-Times/o-typography"
+	},
+	"demos": [
+		{
+			"name": "headings",
+			"template": "demos/src/headings.mustache",
+			"description": ""
+		},
+		{
+			"name": "leads",
+			"template": "demos/src/leads.mustache",
+			"description": ""
+		},
+		{
+			"name": "body",
+			"template": "demos/src/body.mustache",
+			"description": ""
+		},
+		{
+			"name": "article",
+			"template": "demos/src/article.mustache",
+			"description": ""
+		},
+		{
+			"name": "body-wrapper",
+			"template": "demos/src/body-wrapper.mustache",
+			"description": "",
+			"hidden": true
+		},
+		{
+			"name": "manage-account",
+			"template": "demos/src/manage-account.mustache",
+			"description": "",
+			"hidden": true
+		},
+		{
+			"name": "asides",
+			"template": "demos/src/asides.mustache",
+			"description": ""
+		}
+	]
+}

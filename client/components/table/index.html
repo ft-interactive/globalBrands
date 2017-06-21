@@ -1,0 +1,68 @@
+
+<!--<input type="text" id="tableFilter" placeholder="Search for names..">-->
+
+ <input id="tableFilter" type="text" class="search" placeholder="Type to search the treaty list …" data-o-grid-colspan="12 S6 Sleft M6 L6 XL6" />
+
+<table id="brandsTable" class="o-table o-table--responsive-flat" data-o-component="o-table" style="text-align: top;">
+<!--<table id="globalBrands" class="o-table o-table--responsive-flat" data-o-component="o-table" data-o-table-responsive="flat">-->
+	<thead>	
+		<tr>
+			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">2017</th>
+			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">2016</th>
+			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Change</th>
+			<th>Brand</th>
+			<th>Category</th>
+			<th>Country</th>
+			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value 2017 ($m)</th>
+			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value 2016 ($m)</th>
+			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value change (%)</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for row in table %}
+		<tr>
+			<td style="text-align: right; vertical-align:top;"
+				class="o-table__cell--numeric">
+				{% if row.rank2017 %}{{ (row.rank2017)}}{% endif %}
+			</td>
+
+			<td style="text-align: right; vertical-align:top;"
+			class="o-table__cell--numeric"
+			data-o-table-order="{% if row.rank2016 === 'New' %}99999{% else %}{{ row.rank2016 }}{% endif %}">
+				{{ row.rank2016 }}
+			</td>
+
+			<td style="text-align: right; vertical-align:top;"
+			class="o-table__cell--numeric"
+			data-o-table-order="{% if row.rankchange === '–' %}0{% elif row.rankchange === 'n.a.' %}-99999{% else %}{{ row.rankchange }}{% endif %}">
+				{% if row.rankchange %}{{ (row.rankchange)}}{% endif %}
+			</td>
+
+			<td style="text-align: left; vertical-align:top;">
+				{% if row.brand %}{{ (row.brand)}}{% endif %}</td>
+
+			<td style="text-align: left; vertical-align:top;">
+				{% if row.category %}{{ (row.category)}}{% endif %}</td>
+
+			<td style="text-align: left; vertical-align:top;">
+				{% if row.countryoforigin %}{{ (row.countryoforigin)}}{% endif %}</td>
+
+			<td style="text-align: right; vertical-align:top;"
+			data-o-table-order="{% if row.brandvalue2017m %}{{ row.brandvalue2017m }}{% else %}0{% endif %}">
+				{% if row.brandvalue2017m %}{{ row.brandvalue2017m | thousandSeparators }}{% endif %}
+			</td>
+			
+			<td style="text-align: right; vertical-align:top;"
+			data-o-table-order="{% if row.brandvalue2016m %}{{ row.brandvalue2016m }}{% else %}0{% endif %}">
+				{% if row.brandvalue2016m %}{{ row.brandvalue2016m | thousandSeparators }}{% endif %}
+			</td>
+
+			<td style="text-align: right; vertical-align:top;"
+			data-o-table-order="{% if row.brandvaluechange === '0' %}0{% elif row.brandvaluechange === 'n.a.' %}-99999{% else %}{{ row.brandvaluechange }}{% endif %}">
+				{% if row.brandvaluechange %}{{ (row.brandvaluechange)}}{% endif %}</td>
+		</tr>
+{% endfor %}
+	</tbody>
+</table>
+
+

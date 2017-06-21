@@ -1,0 +1,56 @@
+@charset "UTF-8";
+#table_fees {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#table_fees th[aria-sort="descending"]:after {
+  content: "▾";
+  margin-left: 5px;
+}
+
+#table_fees th[aria-sort="ascending"]:after {
+  content: "▴";
+  margin-left: 5px;
+}
+
+@media (max-width: 61.24em) {
+  #table_fees .table__exclude-mobile {
+    display: none;
+  }
+}
+
+#table_fees th {
+  color: #00757F;
+  border-bottom: #CCC1B7 solid 1px;
+  line-height: 18px;
+  vertical-align: top;
+}
+
+#table_fees th:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#table_fees tr {
+  border-bottom: #CCC1B7 solid 1px;
+}
+
+#table_fees td {
+  text-align: right;
+}
+
+#table_fees td.table_colspan {
+  text-align: center;
+  font-weight: 600;
+  color: #4D4845;
+  border-bottom: #4D4845 solid 2px;
+}
+
+#table_fees td.ranking {
+  text-align: left;
+}
+
+#table_fees td.firm {
+  text-align: left;
+}
