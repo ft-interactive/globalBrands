@@ -1,0 +1,39 @@
+@import 'o-colors/main';
+@import 'o-grid/main';
+@import 'o-table/main';
+@import 'components/core/main';
+
+/*
+      TODO: delete this comment
+
+      Write your code here - keep it neat!
+      Split logical parts of you project into components e.g.
+
+      /client
+        - /components
+            - /component-name
+                - styles.scss
+                - index.js
+                - template.html
+*/
+
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  margin: 0 auto 20px;
+  border: 1px solid #c1b8b4;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.input-label {
+  width: 100%;
+  margin-bottom: 12px;
+  text-align: center;
+  font-family: MetricWeb, sans-serif;
+  font-size: 22px;
+  color: #505050;
+}
+;
