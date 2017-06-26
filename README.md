@@ -1,6 +1,6 @@
-# [brexit-treaty-database](https://ig.ft.com/brexit-treaty-database)
+# [top-100-global-brands](https://ig.ft.com/top-100-global-brands)
 
-> All the treaties the UK will need to renegotiate after Brexit.
+> Top 100 global brands, 2017
 
 [![Build Status][circle-image]][circle-url] [![Dependency Status][devdeps-image]][devdeps-url]
 
