@@ -11,14 +11,14 @@ export default () => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: new Date(),
 
-  headline: 'Top 100 global brands',
+  headline: 'Top 100 global brands, 2017',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: 'Add a summary here',
+  summary: 'The BrandZ ranking of the world’s 100 most valuable stocks, compiled by Kantar Millward Brown, part of the WPP advertising group',
 
   topic: {
     name: 'Global brands',
-    url: 'https://www.ft.com/reports/global-brands',
+    url: 'www.ft.com/reports/global-brands',
   },
 
   relatedArticle: {
@@ -38,6 +38,7 @@ export default () => ({ // eslint-disable-line
   // Byline can by a plain string, markdown, or array of authors
   // if array of authors, url is optional
   byline: [
+    { name: 'Scheherazade Daneshkhu', url: 'https://www.ft.com/stream/d69cf22f-ac26-344a-9141-2d80728be9a0'},
     { name: 'Chris Campbell', url: 'https://www.ft.com/chris-campbell' },
   ],
 
@@ -62,12 +63,12 @@ export default () => ({ // eslint-disable-line
   */
   // General social
   socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=1440',
-  socialHeadline: 'to come',
-   socialDescription: 'to come',
+  socialHeadline: 'The most valuable global brands',
+   socialDescription: 'Technology companies dominate the table, while car makers and banks decline',
    twitterCreator: '@ft', // shows up in summary_large_image cards
 
   // TWEET BUTTON CUSTOM TEXT
-  tweetText: 'to come',
+  tweetText: 'The most valuable global brands',
   twitterRelatedAccounts: [], // Twitter lists these as suggested accounts to follow after a user tweets (do not include @)
 
   // Fill out the Facebook/Twitter metadata sections below if you want to
@@ -75,18 +76,18 @@ export default () => ({ // eslint-disable-line
 
   // TWITTER METADATA (for Twitter cards)
   twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=1440',
- twitterHeadline: 'to come',
-  twitterDescription: 'to come',
+ twitterHeadline: 'The most valuable global brands',
+  twitterDescription: 'Technology companies dominate the table, while car makers and banks decline',
 
   // FACEBOOK
   facebookImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=1440',
-   facebookHeadline: 'to come',
-   facebookDescription: 'to come',
+   facebookHeadline: 'The most valuable global brands',
+   facebookDescription: 'Technology companies dominate the table, while car makers and banks decline',
 
   //ADVERTISING
   ads: {
     // ad unit hierarchy makes ads more granular. Start with ft.com and /companies /markets /world as appropriate to your story
-    gptAdunit: 'ft.com/special-reports',
+    gptAdunit: 'ft.com/reports',
     // granular targeting is optional and will be specified by the ads team
     dftTargeting: '',
   },
