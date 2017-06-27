@@ -18,7 +18,7 @@ export default () => ({ // eslint-disable-line
 
   topic: {
     name: 'Global brands',
-    url: 'www.ft.com/reports/global-brands',
+    url: 'https://www.ft.com/reports/global-brands',
   },
 
   relatedArticle: {
