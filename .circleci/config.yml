@@ -41,15 +41,3 @@ jobs:
             else
               yarn run deploy -- --confirm
             fi
-      - run:
-          name: Check accessibility of deployed site
-          command: |
-            if [ "$PREVIEW" == "true" ]
-            then
-              yarn run check-accessibility:preview
-            else
-              yarn run check-accessibility
-            fi
-      - run:
-          name: General QA checks
-          command: yarn run qa || echo "Automatic QA checks failed. Continuing anyway"
