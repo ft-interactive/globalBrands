@@ -28,13 +28,15 @@
 
 			<td style="text-align: right; vertical-align:top;"
 			class="o-table__cell--numeric"
-			data-o-table-order="{% if row.rank2017 === 'New' %}99999{% else %}{{ row.rank2017 }}{% endif %}">
+			{# data-o-table-order="{% if row.rank2017 === 'New' %}99999{% else %}{{ row.rank2017 }}{% endif %}" #}
+			>
 				{{ row.rank2017 }}
 			</td>
 
 			<td style="text-align: right; vertical-align:top;"
 			class="o-table__cell--numeric"
-			data-o-table-order="{% if row.rankchange === '–' %}0{% elif row.rankchange === 'n.a.' %}-99999{% else %}{{ row.rankchange }}{% endif %}">
+			{# data-o-table-order="{% if row.rankchange === '–' %}0{% elif row.rankchange === 'n.a.' %}-99999{% else %}{{ row.rankchange }}{% endif %}" #}
+			>
 				{% if row.rankchange %}{{ (row.rankchange)}}{% endif %}
 			</td>
 
@@ -48,17 +50,20 @@
 				{% if row.countryoforigin %}{{ (row.countryoforigin)}}{% endif %}</td>
 
 			<td style="text-align: right; vertical-align:top;"
-			data-o-table-order="{% if row.brandvalue2017m %}{{ row.brandvalue2017m }}{% else %}0{% endif %}">
+			{# data-o-table-order="{% if row.brandvalue2017m %}{{ row.brandvalue2017m }}{% else %}0{% endif %}" #}
+			> 
 				{% if row.brandvalue2018m %}{{ row.brandvalue2018m | thousandSeparators }}{% endif %}
 			</td>
 			
 			<td style="text-align: right; vertical-align:top;"
-			data-o-table-order="{% if row.brandvalue2016m %}{{ row.brandvalue2016m }}{% else %}0{% endif %}">
+			{# data-o-table-order="{% if row.brandvalue2016m %}{{ row.brandvalue2016m }}{% else %}0{% endif %}" #}
+			> 
 				{% if row.brandvalue2017m %}{{ row.brandvalue2017m | thousandSeparators }}{% endif %}
 			</td>
 
 			<td style="text-align: right; vertical-align:top;"
-			data-o-table-order="{% if row.brandvaluechange === '0' %}0{% elif row.brandvaluechange === 'n.a.' %}-99999{% else %}{{ row.brandvaluechange }}{% endif %}">
+			{# data-o-table-order="{% if row.brandvaluechange === '0' %}0{% elif row.brandvaluechange === 'n.a.' %}-99999{% else %}{{ row.brandvaluechange }}{% endif %}" #}
+			>
 				{% if row.brandvaluechange %}{{ (row.brandvaluechange)}}{% endif %}</td>
 		</tr>
 {% endfor %}

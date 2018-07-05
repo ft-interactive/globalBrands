@@ -1,3 +1,5 @@
+import OTable from 'o-table';
+
 document.querySelector('input#tableFilter')
   .onkeyup = (event)=>{
     const filter = event.target.value.toUpperCase(); //get the contents of the search box in UPPERCASE
@@ -11,5 +13,8 @@ document.querySelector('input#tableFilter')
     });
   };
 
-const OTable = require('o-table');
-oTable = new OTable(document.body);
+// const oTable = new OTable(document.body);
+
+document.addEventListener('oTable.sorted', (event) => {
+  console.log(`The target table was just sorted by column ${event.detail.columnIndex} in an ${event.detail.sort} order.`);
+});
