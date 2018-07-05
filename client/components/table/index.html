@@ -1,73 +1,89 @@
 
 <!--<input type="text" id="tableFilter" placeholder="Search for names..">-->
+<div class="o-grid-row">
+	<div data-o-grid-colspan="12 S6 Scenter M6 L6 XL6">
+		<input id="tableFilter" type="text" class="search" title="Search box" placeholder="Type to search the brands list …" />
+	</div>
+</div>
 
- <input id="tableFilter" type="text" class="search" title="Search box" placeholder="Type to search the brands list …" data-o-grid-colspan="12 S6 Sleft M6 L6 XL6" />
+<div class="o-grid-row">
+	<div data-o-grid-colspan="12 S11 Scenter">
+		<table id="brandsTable" class="o-table o-table--responsive-flat" data-o-component="o-table" style="text-align: top;">
+			<thead>	
+				<tr>
+					<th data-o-table-data-type="numeric" class="o-table__cell--numeric">2018</th>
+					<th data-o-table-data-type="numeric" class="o-table__cell--numeric">2017</th>
+					<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Change</th>
+					<th>Brand</th>
+					<th>Category</th>
+					<th>Country</th>
+					<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value 2018 ($m)</th>
+					<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value 2017 ($m)</th>
+					<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value change (%)</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for row in table %}
+				<tr>
+					<td style="text-align: right; vertical-align:top;"
+						class="o-table__cell--numeric">
+						{% if row.rank2018 %}{{ (row.rank2018)}}{% endif %}
+					</td>
 
-<table id="brandsTable" class="o-table o-table--responsive-flat" data-o-component="o-table" style="text-align: top;">
-<!--<table id="globalBrands" class="o-table o-table--responsive-flat" data-o-component="o-table" data-o-table-responsive="flat">-->
-	<thead>	
-		<tr>
-			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">2018</th>
-			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">2017</th>
-			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Change</th>
-			<th>Brand</th>
-			<th>Category</th>
-			<th>Country</th>
-			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value 2018 ($m)</th>
-			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value 2017 ($m)</th>
-			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value change (%)</th>
-		</tr>
-	</thead>
-	<tbody>
-{% for row in table %}
-		<tr>
-			<td style="text-align: right; vertical-align:top;"
-				class="o-table__cell--numeric">
-				{% if row.rank2018 %}{{ (row.rank2018)}}{% endif %}
-			</td>
+					<td style="text-align: right; vertical-align:top;"
+					class="o-table__cell--numeric"
+					{# data-o-table-order="{% if row.rank2017 === 'New' %}99999{% else %}{{ row.rank2017 }}{% endif %}" #}
+					>
+						{{ row.rank2017 }}
+					</td>
 
-			<td style="text-align: right; vertical-align:top;"
-			class="o-table__cell--numeric"
-			{# data-o-table-order="{% if row.rank2017 === 'New' %}99999{% else %}{{ row.rank2017 }}{% endif %}" #}
-			>
-				{{ row.rank2017 }}
-			</td>
+					<td style="text-align: right; vertical-align:top;"
+					class="o-table__cell--numeric"
+					{# data-o-table-order="{% if row.rankchange === '–' %}0{% elif row.rankchange === 'n.a.' %}-99999{% else %}{{ row.rankchange }}{% endif %}" #}
+					>
+						{% if row.rankchange %}{{ (row.rankchange)}}{% endif %}
+					</td>
 
-			<td style="text-align: right; vertical-align:top;"
-			class="o-table__cell--numeric"
-			{# data-o-table-order="{% if row.rankchange === '–' %}0{% elif row.rankchange === 'n.a.' %}-99999{% else %}{{ row.rankchange }}{% endif %}" #}
-			>
-				{% if row.rankchange %}{{ (row.rankchange)}}{% endif %}
-			</td>
+					<td style="text-align: left; vertical-align:top;">
+						{% if row.brand %}{{ (row.brand)}}{% endif %}</td>
 
-			<td style="text-align: left; vertical-align:top;">
-				{% if row.brand %}{{ (row.brand)}}{% endif %}</td>
+					<td style="text-align: left; vertical-align:top;">
+						{% if row.category %}{{ (row.category)}}{% endif %}</td>
 
-			<td style="text-align: left; vertical-align:top;">
-				{% if row.category %}{{ (row.category)}}{% endif %}</td>
+					<td style="text-align: left; vertical-align:top;">
+						{% if row.countryoforigin %}{{ (row.countryoforigin)}}{% endif %}</td>
 
-			<td style="text-align: left; vertical-align:top;">
-				{% if row.countryoforigin %}{{ (row.countryoforigin)}}{% endif %}</td>
+					<td style="text-align: right; vertical-align:top;"
+					{# data-o-table-order="{% if row.brandvalue2017m %}{{ row.brandvalue2017m }}{% else %}0{% endif %}" #}
+					> 
+						{% if row.brandvalue2018m %}{{ row.brandvalue2018m | thousandSeparators }}{% endif %}
+					</td>
+					
+					<td style="text-align: right; vertical-align:top;"
+					{# data-o-table-order="{% if row.brandvalue2016m %}{{ row.brandvalue2016m }}{% else %}0{% endif %}" #}
+					> 
+						{% if row.brandvalue2017m %}{{ row.brandvalue2017m | thousandSeparators }}{% endif %}
+					</td>
 
-			<td style="text-align: right; vertical-align:top;"
-			{# data-o-table-order="{% if row.brandvalue2017m %}{{ row.brandvalue2017m }}{% else %}0{% endif %}" #}
-			> 
-				{% if row.brandvalue2018m %}{{ row.brandvalue2018m | thousandSeparators }}{% endif %}
-			</td>
-			
-			<td style="text-align: right; vertical-align:top;"
-			{# data-o-table-order="{% if row.brandvalue2016m %}{{ row.brandvalue2016m }}{% else %}0{% endif %}" #}
-			> 
-				{% if row.brandvalue2017m %}{{ row.brandvalue2017m | thousandSeparators }}{% endif %}
-			</td>
+					<td style="text-align: right; vertical-align:top;"
+					{# data-o-table-order="{% if row.brandvaluechange === '0' %}0{% elif row.brandvaluechange === 'n.a.' %}-99999{% else %}{{ row.brandvaluechange }}{% endif %}" #}
+					>
+						{% if row.brandvaluechange %}{{ (row.brandvaluechange)}}{% endif %}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
 
-			<td style="text-align: right; vertical-align:top;"
-			{# data-o-table-order="{% if row.brandvaluechange === '0' %}0{% elif row.brandvaluechange === 'n.a.' %}-99999{% else %}{{ row.brandvaluechange }}{% endif %}" #}
-			>
-				{% if row.brandvaluechange %}{{ (row.brandvaluechange)}}{% endif %}</td>
-		</tr>
-{% endfor %}
-	</tbody>
-</table>
-
-
+<div class="o-grid-row">
+	<div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
+      	<footer class="o-typography-footer">
+			<small>The Brand Value of Coca-Cola includes Lights, Diets and Zero; Budweiser includes Bud Light; Pepsi includes Diets; Red Bull includes sugar-free and Cola</small>
+		</footer>
+		
+		<footer class="o-typography-footer">
+			<small>Source: <a href="http://www.millwardbrown.com/brandz">Kantar Millward Brown/BrandZ</a> (including data from Bloomberg)</small>
+		</footer>
+    </div>
+</div>
