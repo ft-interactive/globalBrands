@@ -69,9 +69,9 @@ table {
 
       &> th {
         font-weight: 600;
-        background-color: oColorsGetPaletteColor('pink-tint2');
-        color: oColorsGetPaletteColor('grey-tint5');
-        border-bottom: 1px solid oColorsGetPaletteColor('pink-tint4');
+        background-color: oColorsGetPaletteColor('black-10');
+        color: oColorsGetPaletteColor('black-80');
+        border-bottom: 1px solid oColorsGetPaletteColor('black-30');
         cursor: default;
         padding: 5px 30px 5px 10px;
         text-align: left;
@@ -96,14 +96,14 @@ table {
           text-align: left;
         }
         &:hover {
-          background-color: oColorsGetPaletteColor('pink-tint3');
+          background-color: oColorsGetPaletteColor('black-20');
           transition: background-color 0s
         }
         &:active {
-          background-color: darken(oColorsGetPaletteColor('pink-tint3'), 5%);
+          background-color: darken(oColorsGetPaletteColor('black-20'), 5%);
         }
         &[aria-sort='descending']{
-          background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-up?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat oColorsGetPaletteColor('pink-tint3');
+          background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-up?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat oColorsGetPaletteColor('black-20');
           background-repeat: no-repeat;
           background-position: 95% center;
           background-position: right 15px center; 
@@ -111,7 +111,7 @@ table {
           margin: 0 7px 8px 0;
         }
         &[aria-sort='ascending']{
-          background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-down?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat oColorsGetPaletteColor('pink-tint3');
+          background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-down?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat oColorsGetPaletteColor('black-20');
           background-repeat: no-repeat;
           background-position: 95% center;
           background-position: right 15px center; 
@@ -126,10 +126,10 @@ table {
     &> tr {
 
       &:nth-child(odd) {
-        background-color: oColorsGetPaletteColor('pink-tint1');
+        background-color: oColorsGetPaletteColor('black-5');
       }
       td{
-        border-bottom: 0px solid oColorsGetPaletteColor('pink-tint2');
+        border-bottom: 0px solid oColorsGetPaletteColor('black-10');
         padding: 10px;
         text-align: center;
         -webkit-font-feature-settings: 'tnum' 1;

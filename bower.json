@@ -2,8 +2,8 @@
   "name": "starter-kit",
   "private": true,
   "dependencies": {
-    "o-colors": "^3.3.1",
-    "o-grid": "^4.3.1",
-    "o-table": "^5.2.1"
+    "o-colors": "^4.4.1",
+    "o-grid": "^4.4.1",
+    "o-table": "^6.7.3"
   }
 }

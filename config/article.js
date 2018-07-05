@@ -1,7 +1,7 @@
 export default () => ({ // eslint-disable-line
 
   // link file UUID
-  id: '4b1a73d4-5a5f-11e7-b553-e2df1b0c3220',
+  id: '7c7c0a22-803e-11e8-8e67-1e1a0846c475',
 
   // canonical URL of the published page
   // https://ig.ft.com/brexit-treaty-database get filled in by the ./configure script
@@ -11,7 +11,7 @@ export default () => ({ // eslint-disable-line
   //       new Date('2016-05-17T17:11:22Z')
   publishedDate: new Date(),
 
-  headline: 'Top 100 global brands, 2017',
+  headline: 'Top 100 global brands, 2018',
 
   // summary === standfirst (Summary is what the content API calls it)
   summary: 'The BrandZ ranking of the world’s 100 most valuable stocks, compiled by Kantar Millward Brown, part of the WPP advertising group',
@@ -30,7 +30,7 @@ export default () => ({ // eslint-disable-line
     title: '',
     description: '',
     credit: '',
-    url: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=2048&height=1152',
+    url: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8469220014-secjb.png?source=ig&width=2048&height=1152',
     width: 2048, // ensure correct width
     height: 1152, // ensure correct height
   },
@@ -38,7 +38,7 @@ export default () => ({ // eslint-disable-line
   // Byline can by a plain string, markdown, or array of authors
   // if array of authors, url is optional
   byline: [
-    { name: 'Scheherazade Daneshkhu', url: 'https://www.ft.com/stream/d69cf22f-ac26-344a-9141-2d80728be9a0'},
+    { name: 'Maija Palmer', url: 'https://www.ft.com/maija-palmer'},
     { name: 'Chris Campbell', url: 'https://www.ft.com/chris-campbell' },
   ],
 
@@ -64,7 +64,7 @@ export default () => ({ // eslint-disable-line
   // General social
   socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=1440',
   socialHeadline: 'The most valuable global brands',
-   socialDescription: 'Technology companies dominate the table, while car makers and banks decline',
+   socialDescription: 'US brands still dominate in terms of numbers but Chinese businesses are seeing rapid increases in brand value',
    twitterCreator: '@ft', // shows up in summary_large_image cards
 
   // TWEET BUTTON CUSTOM TEXT
@@ -77,12 +77,12 @@ export default () => ({ // eslint-disable-line
   // TWITTER METADATA (for Twitter cards)
   twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=1440',
  twitterHeadline: 'The most valuable global brands',
-  twitterDescription: 'Technology companies dominate the table, while car makers and banks decline',
+  twitterDescription: 'US brands still dominate in terms of numbers but Chinese businesses are seeing rapid increases in brand value',
 
   // FACEBOOK
   facebookImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=1440',
    facebookHeadline: 'The most valuable global brands',
-   facebookDescription: 'Technology companies dominate the table, while car makers and banks decline',
+   facebookDescription: 'US brands still dominate in terms of numbers but Chinese businesses are seeing rapid increases in brand value',
 
   //ADVERTISING
   ads: {

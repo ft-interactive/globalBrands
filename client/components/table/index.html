@@ -7,14 +7,14 @@
 <!--<table id="globalBrands" class="o-table o-table--responsive-flat" data-o-component="o-table" data-o-table-responsive="flat">-->
 	<thead>	
 		<tr>
+			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">2018</th>
 			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">2017</th>
-			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">2016</th>
 			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Change</th>
 			<th>Brand</th>
 			<th>Category</th>
 			<th>Country</th>
+			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value 2018 ($m)</th>
 			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value 2017 ($m)</th>
-			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value 2016 ($m)</th>
 			<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Value change (%)</th>
 		</tr>
 	</thead>
@@ -23,13 +23,13 @@
 		<tr>
 			<td style="text-align: right; vertical-align:top;"
 				class="o-table__cell--numeric">
-				{% if row.rank2017 %}{{ (row.rank2017)}}{% endif %}
+				{% if row.rank2018 %}{{ (row.rank2018)}}{% endif %}
 			</td>
 
 			<td style="text-align: right; vertical-align:top;"
 			class="o-table__cell--numeric"
-			data-o-table-order="{% if row.rank2016 === 'New' %}99999{% else %}{{ row.rank2016 }}{% endif %}">
-				{{ row.rank2016 }}
+			data-o-table-order="{% if row.rank2017 === 'New' %}99999{% else %}{{ row.rank2017 }}{% endif %}">
+				{{ row.rank2017 }}
 			</td>
 
 			<td style="text-align: right; vertical-align:top;"
@@ -49,12 +49,12 @@
 
 			<td style="text-align: right; vertical-align:top;"
 			data-o-table-order="{% if row.brandvalue2017m %}{{ row.brandvalue2017m }}{% else %}0{% endif %}">
-				{% if row.brandvalue2017m %}{{ row.brandvalue2017m | thousandSeparators }}{% endif %}
+				{% if row.brandvalue2018m %}{{ row.brandvalue2018m | thousandSeparators }}{% endif %}
 			</td>
 			
 			<td style="text-align: right; vertical-align:top;"
 			data-o-table-order="{% if row.brandvalue2016m %}{{ row.brandvalue2016m }}{% else %}0{% endif %}">
-				{% if row.brandvalue2016m %}{{ row.brandvalue2016m | thousandSeparators }}{% endif %}
+				{% if row.brandvalue2017m %}{{ row.brandvalue2017m | thousandSeparators }}{% endif %}
 			</td>
 
 			<td style="text-align: right; vertical-align:top;"
