@@ -1,5 +1,5 @@
 body {
-  background-color: #fff1e0;
+  background-color: #fff1e5;
   margin: 0;
   border: 0;
   font-family: MetricWeb, sans-serif;
@@ -54,9 +54,9 @@ table {
 
 table > thead > tr > th {
   font-weight: 600;
-  background-color: #e9decf;
-  color: #333333;
-  border-bottom: 1px solid #a7a59b;
+  background-color: #e6d9ce;
+  color: #33302e;
+  border-bottom: 1px solid #b3a9a0;
   cursor: default;
   padding: 5px 30px 5px 10px;
   text-align: left;
@@ -88,16 +88,16 @@ table > thead > tr > th:nth-child(n+8) {
 }
 
 table > thead > tr > th:hover {
-  background-color: #cec6b9;
+  background-color: #ccc1b7;
   transition: background-color 0s;
 }
 
 table > thead > tr > th:active {
-  background-color: #c4baaa;
+  background-color: #c1b4a8;
 }
 
 table > thead > tr > th[aria-sort='descending'] {
-  background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-up?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat #cec6b9;
+  background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-up?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat #ccc1b7;
   background-repeat: no-repeat;
   background-position: 95% center;
   background-position: right 15px center;
@@ -106,7 +106,7 @@ table > thead > tr > th[aria-sort='descending'] {
 }
 
 table > thead > tr > th[aria-sort='ascending'] {
-  background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-down?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat #cec6b9;
+  background: url(https://image.webservices.ft.com/v1/images/raw/fticon:arrow-down?height=44&tint=9B164F,9B164F&source=ig_wrr) center center no-repeat #ccc1b7;
   background-repeat: no-repeat;
   background-position: 95% center;
   background-position: right 15px center;
@@ -115,11 +115,11 @@ table > thead > tr > th[aria-sort='ascending'] {
 }
 
 table > tbody > tr:nth-child(odd) {
-  background-color: #f7e9d9;
+  background-color: #f2e5da;
 }
 
 table > tbody > tr td {
-  border-bottom: 0px solid #e9decf;
+  border-bottom: 0px solid #e6d9ce;
   padding: 10px;
   text-align: center;
   -webkit-font-feature-settings: 'tnum' 1;
