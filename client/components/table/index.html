@@ -54,13 +54,13 @@
 						{% if row.countryoforigin %}{{ (row.countryoforigin)}}{% endif %}</td>
 
 					<td style="text-align: right; vertical-align:top;"
-					{# data-o-table-order="{% if row.brandvalue2017m %}{{ row.brandvalue2017m }}{% else %}0{% endif %}" #}
+					{# data-o-table-order="{% if row.brandvalue2018m %}{{ row.brandvalue2018m }}{% else %}0{% endif %}" #}
 					> 
 						{% if row.brandvalue2018m %}{{ row.brandvalue2018m | thousandSeparators }}{% endif %}
 					</td>
 					
 					<td style="text-align: right; vertical-align:top;"
-					{# data-o-table-order="{% if row.brandvalue2016m %}{{ row.brandvalue2016m }}{% else %}0{% endif %}" #}
+					{# data-o-table-order="{% if row.brandvalue2017m %}{{ row.brandvalue2017m }}{% else %}0{% endif %}" #}
 					> 
 						{% if row.brandvalue2017m %}{{ row.brandvalue2017m | thousandSeparators }}{% endif %}
 					</td>
