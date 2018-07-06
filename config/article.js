@@ -55,17 +55,17 @@ export default () => ({ // eslint-disable-line
         Twitter card docs:
         https://dev.twitter.com/cards/markup
   */
-  twitterCard: 'summary_large_image cards',
+  twitterCard: 'summary_large_image',
 
   /*
   TODO: Do you want to tweak any of the
         optional social meta data?
   */
   // General social
-  socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=1440',
+  socialImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8469220014-secjb.png?source=ig&width=1440',
   socialHeadline: 'The most valuable global brands',
-   socialDescription: 'US brands still dominate in terms of numbers but Chinese businesses are seeing rapid increases in brand value',
-   twitterCreator: '@ft', // shows up in summary_large_image cards
+  socialDescription: 'US brands still dominate in terms of numbers but Chinese businesses are seeing rapid increases in brand value',
+  twitterCreator: '@FinancialTimes', // shows up in summary_large_image cards
 
   // TWEET BUTTON CUSTOM TEXT
   tweetText: 'The most valuable global brands',
@@ -75,14 +75,14 @@ export default () => ({ // eslint-disable-line
   // override the General social options above
 
   // TWITTER METADATA (for Twitter cards)
-  twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=1440',
- twitterHeadline: 'The most valuable global brands',
+  twitterImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8469220014-secjb.png?source=ig&width=1440',
+  twitterHeadline: 'The most valuable global brands',
   twitterDescription: 'US brands still dominate in terms of numbers but Chinese businesses are seeing rapid increases in brand value',
 
   // FACEBOOK
-  facebookImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8502122625-ssin4.png?source=ig&width=1440',
-   facebookHeadline: 'The most valuable global brands',
-   facebookDescription: 'US brands still dominate in terms of numbers but Chinese businesses are seeing rapid increases in brand value',
+  facebookImage: 'https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fft-ig-images-prod.s3-website-eu-west-1.amazonaws.com%2Fv1%2F8469220014-secjb.png?source=ig&width=1440',
+  facebookHeadline: 'The most valuable global brands',
+  facebookDescription: 'US brands still dominate in terms of numbers but Chinese businesses are seeing rapid increases in brand value',
 
   //ADVERTISING
   ads: {
