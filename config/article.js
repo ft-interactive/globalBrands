@@ -14,7 +14,7 @@ export default () => ({ // eslint-disable-line
   headline: 'Top 100 global brands, 2018',
 
   // summary === standfirst (Summary is what the content API calls it)
-  summary: 'The BrandZ ranking of the world’s 100 most valuable stocks, compiled by Kantar Millward Brown, part of the WPP advertising group',
+  summary: 'The BrandZ ranking of the world’s 100 most valuable brands, compiled by Kantar Millward Brown, part of the WPP advertising group',
 
   topic: {
     name: 'Global brands',
@@ -86,10 +86,12 @@ export default () => ({ // eslint-disable-line
 
   //ADVERTISING
   ads: {
-    // ad unit hierarchy makes ads more granular. Start with ft.com and /companies /markets /world as appropriate to your story
-    gptAdunit: 'ft.com/reports',
+    // Ad unit hierarchy makes ads more granular.
+    gptSite: 'ft.com/special-reports',
+    // Start with ft.com and /companies /markets /world as appropriate to your story
+    gptZone: false,
     // granular targeting is optional and will be specified by the ads team
-    dftTargeting: '',
+    dfpTargeting: false,
   },
 
   tracking: {
