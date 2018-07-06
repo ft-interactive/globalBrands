@@ -170,14 +170,15 @@
 <meta name="twitter:creator" content="{{ twitterCreator }}">
 {% endif -%}
 
-{% if ads  %}
-<script data-o-ads-config type="application/json">
+{% if flags.ads  %}
+<script data-o-ads-config="" type="application/json">
 {
- "gpt": {
-   "network": 5887,
-   "adUnit": "{{ ads.gptAdunit }}"
- },
- "dfp_targeting": "{{ ads.dftTargeting }}"
+  "gpt": {
+    "network": 5887,
+    "site": "{{ ads.gptSite }}"
+    {%- if ads.gptZone %}, "zone": "{{ ads.gptZone }}"{% endif %}
+  }
+  {%- if ads.dfpTargeting %}, "dfp_targeting": "{{ ads.dfpTargeting }}"{%- endif %}
 }
 </script>
 {% endif %}
